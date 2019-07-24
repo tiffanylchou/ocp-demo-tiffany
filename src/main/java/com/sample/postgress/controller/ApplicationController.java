@@ -28,6 +28,12 @@ public class ApplicationController {
 	
 	}
 	
+	@GetMapping(value = "/appid-callback")
+	public String getHello() {
+		return "Hi from the OCP Demo!";
+
+	}
+	
 	@PostMapping(value = "/createEmp")
 	public void createEmployee(@RequestBody Employee emp) {
 		 employeeService.insertEmployee(emp);
